@@ -14,7 +14,7 @@ export class WebComponent {
     return (
       <div id="myWebComponent">
         <h1>Web Component in ShadowDom</h1>
-        <img id="img" src={format('"',this.src,'"')}></img>
+        <img id="img" src={this.src}></img>
         <h1><slot name="myTitle">Default title</slot></h1>
         <p><slot name="myText">Default text</slot></p>
       </div>
