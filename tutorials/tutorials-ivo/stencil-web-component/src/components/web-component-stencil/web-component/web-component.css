@@ -1,0 +1,6 @@
+:host {display: block;}
+* {text-align: center;}
+h1 {color: rgb(29, 187, 42);background-color: black;}
+p {color: blue; background-color: grey;}
+#myWebComponent {border-style: dotted;}
+

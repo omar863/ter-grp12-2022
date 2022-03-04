@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example page that uses a Web Component</title>
+  <script type="module" src="my-web-component/myWebComponent.js" ></script>
+  <script async type="module" src="https://unpkg.com/@power-elements/lazy-image/lazy-image.js"></script>
+  <!-- Polyfill -->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.20/webcomponents.js"></script>-->
+  <!-- import the web components -->
+  <!--<link rel="import" href="x-gif/x-gif.html">-->
+  <!--<link rel="import" href="voice/voice-player.html">-->
+</head>
+<body>
+
+  
+
+  <style>
+    h1 {color: blueviolet;}
+  </style>
+
+  <!--<template id="myTemplate">
+    <h1 style="color: rgb(29, 187, 42); background-color: black;"> Web Component in ShadowDom </h1>
+    <img width="500px" src="">
+    <div class="comment"></div>
+  </template>-->
+
+  <!--<voice-player text="ol ol" id="voice"></voice-player>
+  <button onclick="speak(event);">Click to speak</button>-->
+
+  <my-web-component src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flive.staticflickr.com%2F65535%2F50078145622_3179e8df98_b.jpg&f=1&nofb=1">my-web-component
+    <span slot="myTitle"><b>Injected TITLE</b></span>
+    <span slot="myText"><b>Injected TEXT</b></span>
+  </my-web-component>
+
+  <lazy-image src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flive.staticflickr.com%2F65535%2F50078145622_3179e8df98_b.jpg&f=1&nofb=1" alt="Lazy Image">
+    
+  </lazy-image>
+
+  <!--<script>
+    var element = document.querySelector('#voice');
+  
+    function speak(event) {
+      event.preventDefault();
+      element.speak();
+    }
+  
+  </script>-->
+
+  <h1> Non ShadomDom H1 </h1>
+  <!--<h1 id="withShadowDom"> ShadowDom H1 </h1>-->
+
+<!--<script>
+var t = document.querySelector("#myTemplate");
+t.content.querySelector('img').src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdl-digital.com%2Fimages%2FMoon%2FMoonStack60pctWaning66FramesDeconpt8VerUSM2Tame2USMRullRez.jpg&f=1&nofb=1";
+
+var host = document.querySelector("#withShadowDom");
+var root = host.createShadowRoot();
+root.appendChild(document.importNode(t.content, true));
+//var clone = document.importNode(root.content, true);
+//document.body.appendChild(clone);
+
+</script>-->
+</body>
+</html>
