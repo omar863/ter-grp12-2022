@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>exemple d'utilisation</title>
+    <script src="myComponents/index.js" type="module"></script>
+  </head>
+
+  <body>
+      <h1>ici mon component genérateur logos </h1>
+    <my-logo id="leLogo" couleur="green" texte="je suis la"></my-logo>
+    <button onclick="traiteclick()">clique sur moi</button>
+  </body>
+
+  <script>
+    let logo = document.querySelector("#leLogo");
+    function traiteclick(){
+      logo.changeText("Salut");
+    }
+  </script>
+</html>
