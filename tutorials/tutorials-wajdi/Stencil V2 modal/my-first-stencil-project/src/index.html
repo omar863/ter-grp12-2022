@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+    <link rel="stylesheet" href="/build/my-first-stencil-project.css">
+    <script type="module" src="/build/my-first-stencil-project.esm.js"></script>
+    <script nomodule src="/build/my-first-stencil-project.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row space-between">
+        <h1>modal</h1>
+      </div>
+      <div class="row space-between">
+        <appollo-button text="Open modal" appearance="primary"></appollo-button>
+        <appollo-modal buttons='[{"text":"Confirm"},{"text":"Cancel"}]' header="yoo" appearance="danger">yooo </appollo-modal>
+        
+      </div>  
+    </div>    
+  </body>
+  <script>
+    var btn = document.querySelector("appollo-button")
+    var modal = document.querySelector('appollo-modal')
+    btn.addEventListener('click',()=>{
+      modal.isopen=true;
+    })
+    modal.addEventListener('action',()=>{
+      console.log("confirm pressed")
+    })
+  </script>
+</html>
