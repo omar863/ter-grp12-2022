@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+    <link rel="stylesheet" href="/build/my-first-stencil-project.css">
+    <script type="module" src="/build/my-first-stencil-project.esm.js"></script>
+    <script nomodule src="/build/my-first-stencil-project.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row space-between">
+        <h1>Buttons</h1>
+      </div>
+      <div class="row space-between">
+        <appollo-button text="yep c'est moi"></appollo-button>
+        <appollo-button id="primary"text="primary" appearance="primary"></appollo-button>
+        <appollo-button text="primary" appearance="secondary"></appollo-button>
+        <appollo-button text="tertiary" appearance="tertiary"></appollo-button>
+        <appollo-button text="warning" appearance="warning"></appollo-button>
+        <appollo-button text="danger" appearance="danger"></appollo-button>
+        
+      </div>  
+    </div>    
+  </body>
+  <script>
+    var btn = document.querySelector("#primary")
+    btn.addEventListener('click',()=>{
+      alert("hello");
+    })
+  </script>
+</html>
