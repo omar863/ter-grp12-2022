@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Exemple d'utilisation web component</title>
+    <script src="myComponents/index.js" type="module"></script>
+</head>
+
+<body>
+    <h1>Ici mon web component générateur de logo </h1>
+    <my-logo id="leLogo" text="hello World" couleur="purple"></my-logo>
+    <button onclick="traiteClick()"> Click me </button>
+</body>
+<script>
+    let logo = document.querySelector(" #leLogo");
+    function traiteClick() {
+        logo.changeText("coucou");
+    }
+</script>
+
+</html>
